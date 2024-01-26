@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+#div3{
+margin:auto;
+text-align: center;
+color: black;
+width: 400px;
+height: 400px;
+background-color: ghostwhite;
+border: 1px solid;
+
+}
+.but{
+	 padding: 10px 20px; 
+	 background-color:cornflowerblue; 
+	 border-radius:10px;
+	 margin-top: 30px;
+}
+#div1{
+
+color: black;
+text-align: center;
+float: left;
+margin-left: 150px;
+}
+#div2
+{
+margin-left: 150px;
+float: left;
+}
+
+ h1 {
+	 font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+ h5 {
+	 font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+    font-size: 16px;
+}
+input[type=text], [type=file],[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+table,tb{
+margin-left:auto; 
+    margin-right:auto;
+    font-size: 17px;
+}

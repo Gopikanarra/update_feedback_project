@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+<title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url("vvit_drone_blur.png");
+             background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #div1{
+
+color: black;
+text-align: center;
+float: left;
+margin-left: 150px;
+}
+#div2
+{
+margin-left: 150px;
+float: left;
+}
+
+        .login-box {
+            width: 350px;
+            height:650px;
+            padding-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .login-box img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .login-box input,
+        .login-box select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box button {
+            width: 50%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+     <script>
+        function validateForm() {
+            var registerNo = document.getElementById('registerNo').value;
+            var accYear = document.getElementById('acc_year').value;
+            var year = document.getElementById('year').value;
+            var branch = document.getElementById('branch').value;
+            var semester = document.getElementById('semester').value;
+            var cycle = document.getElementById('cycle').value;
+            var section = document.getElementById('section').value;
+
+            if (registerNo === "" || accYear === "" || year === "" || branch === "" || semester === "" || cycle === "" || section === "") {
+                document.getElementById('errorText').innerHTML = "Please fill in all the details.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div id="div2">
+				<img src="vvitlogo.png" style="width:120px;height:120px;">
+				</div>
+<div id="div1">
+	<center>
+		<h1 >Vasireddy Venkatadri Institute of Technology</h1>
+
+<br/>
+<br/><br/><br/><br/>
+</div>
+<div>
+<center><img src="nba.jpg" style="width:100px;height:100px;">
+<img src="naac.jpg" style="width:100px;height:100px;"></center><br>
+<br/>
+<br/>
+<br/>
+ <form id="loginForm" action='./ValidateStudentTable' onsubmit="return validateForm()">
+    <div class="login-box">
+        <img src="vvitlogo.png" alt="Logo">
+        <h2>Student Login</h2>
+            <div id="studentFields"><br/>
+            <table>
+            <tr>
+            <td><label>Register No:</label></td>
+            <td><input type="text" id="registerNo" name="registerNo" placeholder="Register No"><br></td>
+            </tr>
+            <tr>
+              <td>  <label>Academic Year:</label></td>
+              <td> <select id="acc_year" name="acc_year">
+                    <option value="">Select</option>
+                    <option value="2018-2019">2018-19</option>
+                    <option value="2019-2020">2019-20</option>
+                    <option value="2020-2021">2020-21</option>
+                    <option value="2021-2022">2021-22</option>
+                    <option value="2022-2023">2022-23</option>
+                </select></td>
+                </tr>
+                <tr>
+               <td> <label>Year:</label></td>
+                <td><select id="year" name="year">
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+                </tr>
+                <tr>
+                <td><label>Branch:</label></td>
+                <td><select id="branch" name="branch">
+                    <option value="">Select</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="CSM">CSM</option>
+                    <option value="CIC">CIC</option>
+                    <option value="CSO">CSO</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CIVIL">CIVIL</option>
+                </select></td></tr>
+                <tr>
+                <td><label>Semester:</label></td>
+                <td><select id="semester" name="semester">
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select></td>
+                <tr>
+                <td><label>Cycle:</label></td>
+                <td><select id="cycle" name="cycle">
+                    <option value="">Select</option>
+                    <option value="cycle1">1</option>
+                    <option value="cycle2">2</option>
+                </select></td></tr>
+                <tr>
+                <td><label>Section:</label></td>
+               <td><select id="section" name="section">
+                    <option value="">Select</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select></td>
+                </tr>
+                </table>
+            </div>
+            <button type="submit">Login</button>
+            <p id="errorText" class="error"></p>
+        </form>
+        
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exit Survey Form</title>
+    <style>
+        h1{
+        text-align:center;
+        border-style:outset;
+        }
+        .redtext{
+        color:red;
+        }
+         
+        h2{
+        font-size:40px;
+        color:red;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+       form {
+    border: 1px solid black;
+    margin: 50px; /* Adjust this value as needed */
+    padding: 20px; /* Add padding to the form */
+    border-style: solid;
+    background-color: lightblue;
+    max-width: 1000px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form horizontally */
+}
+/*        
+       form {
+             border: 1px solid black;
+             margin-top: 100px;
+             margin-bottom: 100px;
+             margin-right: 150px;
+             margin-left: 80px;
+             border-style:solid;
+             background-color:lightblue;
+        }  */
+        /* .page-container1 {
+            padding-left:140px;
+            border-radius: 25px;
+            width: 100%;
+            height:40px;
+            
+            border-color: black;
+        }
+ */
+ 
+  .page-container1 img {
+            width: 60%; /* Make the image take up the full width of its container */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px 10px;
+            margin: 5px 10px;
+            box-sizing: content-box;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+   
+       
+        label,input[type="radio"]{
+        width:15px;
+        height:15px;
+        display:flex-inline;
+        padding: 8px 4px;
+        margin:20px 10px;
+        flex-direction:column;
+        vertical-align:middle;
+        }
+         
+       
+        input[type="text"] {
+            display:inline-block;
+            margin-bottom: 2px;
+            width: 97%;
+            font-size:20px;
+            padding:10px 0px;
+        }
+
+        h3,h4{
+        font-size:20px;
+        background-color:skyblue;
+        border-style:inset;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+<body>
+<div class="page-container1">
+        <img src="logo.png">
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <form action="SurveyFormServlet" method="post">
+        <h1><img src="vvitlogo.png" alt="VVIT"><p>Your <span class="redtext">Feedback</span> is valuable for us</p></h1>
+        <h2>Exit Survey</h2>
+        <h3> Give your personal details and rating on various aspects of your program and skills </h3>
+
+        <label for="Name">Name of the student:</label>
+        <input type="text" name="Name" required>
+       
+        <label for="id">Reg id:</label>
+        <input type="text" name="id" required>
+
+        <label for="Duration">Duration of the study:</label>
+        <input type="text" name="Duration" required>
+     
+        <label for="Ps">Placement status:</label>
+        <input type="text" name="Ps" required>
+
+        <label for="pgp">What are your immediate post graduate plans:</label>
+        <input type="text" name="pgp" required>
+        
+        <ol><li><label for="Q1">Your perception of the academic expectations of the program</label><br>
+        <input type="radio" name="Q1" value="Excellent"> Excellent
+        <input type="radio" name="Q1" value="Good"> Good
+        <input type="radio" name="Q1" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q1" value="Unsatisfactory"> Unsatisfactory</li>
+
+        <li><label for="Q2">Programe performance in keping pace with recent trends and development in your field</label><br>
+        <input type="radio" name="Q2" value="Excellent"> Excellent
+        <input type="radio" name="Q2" value="Good"> Good
+        <input type="radio" name="Q2" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q2" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q3">The professional traning and research opportunities of the program provided are</label><br>
+        <input type="radio" name="Q3" value="Excellent"> Excellent
+        <input type="radio" name="Q3" value="Good"> Good
+        <input type="radio" name="Q3" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q3" value="Unsatisfactory"> Unsatisfactory</li>
+
+        <li><label for="Q4">Adequacy of space facilities and lab equipment in your department are</label><br>
+        <input type="radio" name="Q4" value="Excellent"> Excellent
+        <input type="radio" name="Q4" value="Good"> Good
+        <input type="radio" name="Q4" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q4" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q5">Level of Satisfaction with the supervision and guidance you received from the department is</label><br>
+        <input type="radio" name="Q5" value="Excellent"> Excellent
+        <input type="radio" name="Q5" value="Good"> Good
+        <input type="radio" name="Q5" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q5" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q6">Overall quality of your program is</label><br>
+        <input type="radio" name="Q6" value="Excellent"> Excellent
+        <input type="radio" name="Q6" value="Good"> Good
+        <input type="radio" name="Q6" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q6" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q7">Quality of the faculty in your department is</label><br>
+        <input type="radio" name="Q7" value="Excellent"> Excellent
+        <input type="radio" name="Q7" value="Good"> Good
+        <input type="radio" name="Q7" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q7" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q8">PO1: The level of your Engineering Knowledge is</label><br>
+        <input type="radio" name="Q8" value="Excellent"> Excellent
+        <input type="radio" name="Q8" value="Good"> Good
+        <input type="radio" name="Q8" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q8" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q9">PO2: Your Problem Analysis skills are</label><br>
+        <input type="radio" name="Q9" value="Excellent"> Excellent
+        <input type="radio" name="Q9" value="Good"> Good
+        <input type="radio" name="Q9" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q9" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q10">PO3: Your Skills in design and developing solutions are</label><br>
+        <input type="radio" name="Q10" value="Excellent"> Excellent
+        <input type="radio" name="Q10" value="Good"> Good
+        <input type="radio" name="Q10" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q10" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q11">PO4: Your strength in investigating complex problems</label><br>
+        <input type="radio" name="Q11" value="Excellent"> Excellent
+        <input type="radio" name="Q11" value="Good"> Good
+        <input type="radio" name="Q11" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q11" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q12">PO5: Your skills in using Modern Tools are</label><br>
+        <input type="radio" name="Q12" value="Excellent"> Excellent
+        <input type="radio" name="Q12" value="Good"> Good
+        <input type="radio" name="Q12" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q12" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q13">P06: Applicability of your Engineering knowledge towards the society needs</label><br>
+        <input type="radio" name="Q13" value="Excellent"> Excellent
+        <input type="radio" name="Q13" value="Good"> Good
+        <input type="radio" name="Q13" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q13" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q14">PO7: Your Impact on Environmental Sustantility</label><br>
+        <input type="radio" name="Q14" value="Excellent"> Excellent
+        <input type="radio" name="Q14" value="Good"> Good
+        <input type="radio" name="Q14" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q14" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q15">PO8: Your Professional ethics are</label><br>
+        <input type="radio" name="Q15" value="Excellent"> Excellent
+        <input type="radio" name="Q15" value="Good"> Good
+        <input type="radio" name="Q15" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q15" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q16">PO9: Your Individual and Team work is</label><br>
+        <input type="radio" name="Q16" value="Excellent"> Excellent
+        <input type="radio" name="Q16" value="Good"> Good
+        <input type="radio" name="Q16" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q16" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q17">PO10: Your communication skills are</label><br>
+        <input type="radio" name="Q17" value="Excellent"> Excellent
+        <input type="radio" name="Q17" value="Good"> Good
+        <input type="radio" name="Q17" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q17" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q18">PO11: Managing Projects in multidisciplinary environments</label><br>
+        <input type="radio" name="Q18" value="Excellent"> Excellent
+        <input type="radio" name="Q18" value="Good"> Good
+        <input type="radio" name="Q18" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q18" value="Unsatisfactory"> Unsatisfactory</li>
+       
+        <li><label for="Q19">P012: Your ability to engage in independent and lifelong learning is the broade context of technological change</label><br>
+        <input type="radio" name="Q19" value="Excellent"> Excellent
+        <input type="radio" name="Q19" value="Good"> Good
+        <input type="radio" name="Q19" value="Satisfactory"> Satisfactory
+        <input type="radio" name="Q19" value="Unsatisfactory"> Unsatisfactory</li></ol>
+       
+        <h4> Experiences at VVIT </h4>
+        <label for="experience ">Please provide any additional comments about your experience at VVIT:</label>
+        <input type="text" name="Q20" required/>
+        <br>
+        <br>
+        <center>
+        <input type="submit" value="Submit"></center>
+    </form>
+</body>
+</html>
