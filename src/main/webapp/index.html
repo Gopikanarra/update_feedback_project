@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student_view</title>
+<style>
+
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url("vvit_drone_blur.png");
+             background-repeat: no-repeat;
+            background-size: cover;
+        }
+table,tb{
+margin-left:auto; 
+    margin-right:auto;
+    font-size: 18px;
+}
+
+input[type=text], [type=file],[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#div1{
+
+color: black;
+text-align: center;
+float: left;
+margin-left: 80px;
+}
+#div2
+{
+margin-left: 80px;
+float: left;
+}
+
+#div3{
+            width: 400px;
+            height:450px;
+            padding-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.but{
+	 padding: 10px 15px; 
+	 background-color:cornflowerblue; 
+	 border-radius:10px;
+	 margin-top: 30px;
+	 color:white;
+}
+
+ h1 {
+	 font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+ h5 {
+	 font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+    font-size: 16px;
+}
+select{
+	margin-top:10px;
+  margin-left:40px;
+  padding: 10px;
+  color: green;
+}
+
+
+</style>
+</head>
+
+<body>
+	
+<div id="div2">
+				<img src="vvitlogo.png" style="width:120px;height:120px;">
+				</div>
+<div id="div1">
+	<center>
+		<h1 >Vasireddy Venkatadri Institute of Technology</h1>
+<h5>Approved by AICTE - Permanently Affiliated to JNTUK - ISO 9001-2015 Certified<br>Accredited by NAAC with 'A'Grade - B.Tech ECE,MECH,CSE,EEE & IT are accredited by NBA</h5>
+	</center>
+
+</div>
+<div>
+<center><img src="nba.jpg" style="width:100px;height:100px;">
+<img src="naac.jpg" style="width:100px;height:100px;"></center><br>
+
+
+<br>
+<br>
+<div id="div3">
+<center>
+<form action="Course" method="post">
+<img src="vvitlogo.png" alt="Logo">
+<h2 align=center style="padding: 5px;">  Course End Survey</h2>
+<table align="center">
+<tr>
+<td>Roll No:</td>
+<td><input type="text" name="rnumber" required></td>
+</tr>
+
+<tr>
+<td>Year:</td>
+<td>
+<select name="year" id="year"  required>
+<option >--select--</option>
+<option value="4">4</option>
+<option value="3">3</option>
+<option value="2">2</option>
+<option value="1">1</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Semester:</td>
+<td><select name="sem" id="sem"  required>
+<option >--select--</option>
+<option value="2">2</option>
+<option value="1">1</option>
+</select></td>
+</tr>
+<tr>
+<td>Department:</td>
+<td><select name="branch" id="branch" onchange="updateDynamicDropdown()" required>
+<option >--select--</option>
+<option value="CSE">CSE</option>
+<option value="ECE">ECE</option>
+<option value="CIVIL">CIVIl</option>
+<option value="MECH">MECH</option>
+<option value="EEE">EEE</option>
+<option value="it">IT</option>
+<option value="cic">CIC</option>
+<option value="aid">AID</option>
+<option value="csm">CSM</option>
+<option value="cso">CSO</option>
+</select></td>
+</tr>
+
+
+</table>
+<button  type="submit" class="but"  >submit</button>
+</form>
+</center>
+</div>
+<script>
+
+function updateDynamicDropdown() {
+    var subjects = document.getElementById("subjects");
+    subjects.options.length = 0;
+    var selectedYear = document.getElementById("year").value;
+    var selectedSemester = document.getElementById("sem").value;
+    if (selectedYear === "1" && selectedSemester === "1") {
+        addSubjectOption("mathematics(m-1)");
+        addSubjectOption("applied chemistry");
+        addSubjectOption("BEEE");
+        addSubjectOption("c Programming");
+        addSubjectOption("Computer Workshop");
+      }
+    if (selectedYear === "1" && selectedSemester === "2") {
+        addSubjectOption("Mathematics (m-2)");
+        addSubjectOption("Applied Physics");
+        addSubjectOption("Communicative English");
+        addSubjectOption(" Python programming");
+        addSubjectOption("Digital Logic Design");
+      }
+    if (selectedYear === "2" && selectedSemester === "1") {
+        addSubjectOption("mathematics(m-3)");
+        addSubjectOption("MFCS ");
+        addSubjectOption("data structures");
+        addSubjectOption("java  Programming ");
+        addSubjectOption("software engineering");
+      }
+    if (selectedYear === "2" && selectedSemester === "2") {
+        addSubjectOption("probability and statistics");
+        addSubjectOption("Computer Organization");
+        addSubjectOption("Operating Systems");
+        addSubjectOption("Database Management Systems");
+        addSubjectOption("Advanced Java Programming");
+      }
+    if (selectedYear === "3" && selectedSemester === "2") {
+        addSubjectOption("Engineering Economics and Management");
+        addSubjectOption("Design and Analysis of Algorithms");
+        addSubjectOption("Cryptography and Network Security");
+        addSubjectOption("Machine Learninge");
+        addSubjectOption("Cloud computing");
+      }
+    if (selectedYear === "3" && selectedSemester === "1") {
+        addSubjectOption("Computer Networks");
+        addSubjectOption("Artificial Intelligence");
+        addSubjectOption("Automata Theory and Compiler Design");
+        addSubjectOption(" Data Warehousing and Data Mining ");
+        addSubjectOption("Front End Development");
+      }
+    if (selectedYear === "4" && selectedSemester === "1") {
+        addSubjectOption("nhv&nv");
+        addSubjectOption("Big Data Analytics");
+        addSubjectOption("Deep Learning");
+        addSubjectOption("Data Science");
+        addSubjectOption("Blockchain");
+      }
+    }
+
+    function addSubjectOption(subject) {
+      var subjects = document.getElementById("subjects");
+      
+      subjects.add(new Option(subject, subject));
+    }
+
+</script>
+</body>
+</html>
